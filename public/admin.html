@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Evette — Admin</title>
+  <!-- NOTE: filename has NO spaces -->
+  <link rel="stylesheet" href="admin-styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo"><span>Evette</span> <em>Admin</em></div>
+      <div class="header-meta">Messages Dashboard</div>
+    </div>
+  </header>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat-card">
+      <div class="stat-label">Total</div>
+      <div class="stat-value" id="stat-total">0</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Unread</div>
+      <div class="stat-value accent" id="stat-unread">0</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Bookings</div>
+      <div class="stat-value" id="stat-booking">0</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Collabs</div>
+      <div class="stat-value" id="stat-collab">0</div>
+    </div>
+  </div>
+
+  <!-- CONTROLS -->
+  <div class="controls">
+    <div class="search-wrap">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input id="search" type="text" placeholder="Search by name or email…" oninput="render()" />
+    </div>
+    <select id="filter" onchange="render()">
+      <option value="all">All types</option>
+      <option value="booking">Booking — Club / Festival</option>
+      <option value="livepa">Booking — Live PA</option>
+      <option value="collab">Collaboration</option>
+      <option value="label">Label / A&R</option>
+      <option value="sync">Sync & Licensing</option>
+      <option value="press">Press / Media</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+
+  <!-- MESSAGE LIST -->
+  <div id="message-list"></div>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal hidden" onclick="closeModalOnBg(event)">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-meta">
+        <span id="modal-badge" class="badge"></span>
+        <span id="modal-date" class="modal-date"></span>
+      </div>
+
+      <h2 id="modal-name"></h2>
+      <a id="modal-email" class="modal-email" href=""></a>
+
+      <div class="modal-message" id="modal-message"></div>
+
+      <div class="modal-actions">
+        <button id="btn-read" class="btn-read" onclick="markRead()">
+          <i class="fa-solid fa-check"></i> Mark as Read
+        </button>
+        <button id="btn-delete" class="btn-delete" onclick="deleteMsg()">
+          <i class="fa-solid fa-trash"></i> Delete
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTE: filename has NO spaces -->
+  <script src="admin-script.js"></script>
+</body>
+</html>

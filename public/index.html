@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Ivy — DJ & Producer</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+  <!-- Navigation Menu -->
+  <nav id="top">
+    <div class="nav-container">
+      <div class="logo">
+        <span>IvyEvette</span>
+      </div>
+      <div class="links">
+        <div class="link"><a href="#home">Home</a></div>
+        <div class="link"><a href="#about">About</a></div>
+        <div class="link"><a href="#releases">Releases</a></div>
+        <div class="link"><a href="#services">Live & Bookings</a></div>
+        <div class="link"><a href="#contact">Contact</a></div>
+      </div>
+      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+    <div class="dropdown">
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#releases">Releases</a>
+        <a href="#services">Live & Bookings</a>
+        <a href="#contact">Contact</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-bg-text">IVYEVETTE</div>
+    <div class="main-container">
+      <div class="image">
+        <img src="tyan.jpg" alt="IvyEvette DJ & Producer">
+        <div class="vinyl-ring"></div>
+      </div>
+      <div class="content">
+        <div class="eyebrow" data-aos="fade-down">DJ · Producer · Live Artist</div>
+        <h1 data-aos="fade-left">Feel The <span>Sound.</span></h1>
+        <div class="typewriter">
+          <span class="typewriter-text"></span><label>|</label>
+        </div>
+        <p>Electronic music that moves between club culture, cinematic atmosphere, and raw energy. Based everywhere the music takes me.</p>
+        <div class="social-links">
+          <a href="https://soundcloud.com/" title="SoundCloud"><i class="fa-brands fa-soundcloud"></i></a>
+          <a href="https://open.spotify.com/" title="Spotify"><i class="fa-brands fa-spotify"></i></a>
+          <a href="https://instagram.com/" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://web.telegram.org/a/" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary">Book a Show</a>
+          <a href="https://open.spotify.com" target="_blank" class="btn-secondary">
+            <i class="fa-brands fa-spotify"></i> Listen on Spotify
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">scroll ↓</div>
+  </section>
+
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="content">
+      <div class="title"><span>About</span></div>
+      <div class="about-details">
+        <div class="left" data-aos="fade-right">
+          <img src="tyan4.png" alt="IvyEvette">
+          <div class="years-badge">
+            <span class="num">5+</span>
+            <span class="label">Years Behind<br>The Decks</span>
+          </div>
+        </div>
+        <div class="right" data-aos="fade-left">
+          <div class="topic">Music Is Not My Job — It's My Language</div>
+          <p>IvyEvette is a DJ and music producer rooted in electronic and underground club culture. My sets move fluidly between deep, atmospheric textures and peak-time floor energy - never predictable, always intentional.</p>
+          <p style="margin-top: 16px;">I has performed at underground venues, festivals, and private events across the region, and my original productions blend field recordings, synthesizers, and carefully layered percussion into something entirely me own.</p>
+          <p style="margin-top: 16px;">If you are a label, promoter, or fellow artist looking to collaborate - the contact form below is the right place to start.</p>
+          <div class="about-tags">
+            <span>Techno</span>
+            <span>House</span>
+            <span>Ambient</span>
+            <span>Club Sets</span>
+            <span>Live PA</span>
+            <span>Studio Production</span>
+          </div>
+          <div class="button">
+            <a href="#" class="btn-primary" download>
+              <i class="fa-regular fa-file-lines"></i> Download Press Kit
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Releases Section -->
+  <section class="releases" id="releases">
+    <div class="content">
+      <div class="title"><span>Releases</span></div>
+      <p class="section-sub" data-aos="fade-up">Original productions, EPs, and collaborations — available on all platforms.</p>
+      <div class="releases-grid">
+        <div class="release-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="release-cover">
+            <div class="cover-placeholder"><i class="fa-solid fa-compact-disc"></i></div>
+            <div class="release-overlay"><i class="fa-solid fa-play"></i></div>
+          </div>
+          <div class="release-info">
+            <div class="release-title">Singularity</div>
+            <div class="release-meta">Single · 2024</div>
+          </div>
+        </div>
+        <div class="release-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="release-cover">
+            <div class="cover-placeholder"><i class="fa-solid fa-compact-disc"></i></div>
+            <div class="release-overlay"><i class="fa-solid fa-play"></i></div>
+          </div>
+          <div class="release-info">
+            <div class="release-title">Apex Obscure</div>
+            <div class="release-meta">EP · 2024</div>
+          </div>
+        </div>
+        <div class="release-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="release-cover">
+            <div class="cover-placeholder"><i class="fa-solid fa-compact-disc"></i></div>
+            <div class="release-overlay"><i class="fa-solid fa-play"></i></div>
+          </div>
+          <div class="release-info">
+            <div class="release-title">Venus</div>
+            <div class="release-meta">Single · 2023</div>
+          </div>
+        </div>
+        <div class="release-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="release-cover">
+            <div class="cover-placeholder"><i class="fa-solid fa-compact-disc"></i></div>
+            <div class="release-overlay"><i class="fa-solid fa-play"></i></div>
+          </div>
+          <div class="release-info">
+            <div class="release-title">Resonance (feat. Mira K)</div>
+            <div class="release-meta">Collab · 2023</div>
+          </div>
+        </div>
+      </div>
+      <div class="releases-cta">
+        <a href="https://open.spotify.com" target="_blank" class="btn-primary">
+          <i class="fa-brands fa-spotify"></i> All Releases on Spotify
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Live & Bookings Section -->
+  <section class="services" id="services">
+    <div class="content">
+      <div class="title"><span>Live & Bookings</span></div>
+      <div class="boxes">
+        <div class="box" data-aos="fade-up">
+          <div class="icon"><i class="fas fa-music"></i></div>
+          <div class="topic">Club & Festival Sets</div>
+          <p>High-energy DJ sets tailored to the room — from intimate underground nights to main stage festival slots. Evette reads the crowd and adapts in real time.</p>
+        </div>
+        <div class="box" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon"><i class="fas fa-sliders"></i></div>
+          <div class="topic">Live PA</div>
+          <p>A fully live electronic performance using hardware synthesizers, drum machines, and effects - not just a DJ set. Built for stages that want something unique.</p>
+        </div>
+        <div class="box" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon"><i class="fas fa-microphone-lines"></i></div>
+          <div class="topic">Studio Collaboration</div>
+          <p>Open to co-writing, production features, and remix work with labels and independent artists. Reach out with a brief and we'll take it from there.</p>
+        </div>
+        <div class="box" data-aos="fade-up" data-aos-delay="300">
+          <div class="icon"><i class="fas fa-film"></i></div>
+          <div class="topic">Sync & Licensing</div>
+          <p>Original tracks available for film, TV, and brand placements. A catalogue of unreleased music exists specifically for sync requests.</p>
+        </div>
+        <div class="box" data-aos="fade-up" data-aos-delay="400">
+          <div class="icon"><i class="fas fa-headphones"></i></div>
+          <div class="topic">Mix Series & Podcasts</div>
+          <p>Available for mix commissions, guest slots in podcast series, and curated playlists for streaming platforms and brand activations.</p>
+        </div>
+        <div class="box" data-aos="fade-up" data-aos-delay="500">
+          <div class="icon"><i class="fas fa-handshake"></i></div>
+          <div class="topic">Label & A&R Enquiries</div>
+          <p>If you're a label or A&R and want to hear more - get in touch below. A full demo catalogue and EPK are available on request.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="content">
+      <div class="title"><span>Get In Touch</span></div>
+      <p class="section-sub" data-aos="fade-up">Booking inquiries, collaboration proposals, label offers - use the form below. Evette reads every message personally.</p>
+
+      <div class="contact-wrapper">
+        <div class="contact-info" data-aos="fade-right">
+          <div class="info-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Available worldwide · Based in Eastern Europe</span>
+          </div>
+          <div class="info-item">
+            <i class="fa-brands fa-telegram"></i>
+            <span>@ivyevette_music</span>
+          </div>
+          <div class="info-item">
+            <i class="fa-brands fa-instagram"></i>
+            <span>@ivyevette.dj</span>
+          </div>
+          <div class="info-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>booking@ivyevette.music</span>
+          </div>
+          <div class="social-links contact-socials">
+            <a href="#" title="SoundCloud"><i class="fa-brands fa-soundcloud"></i></a>
+            <a href="#" title="Spotify"><i class="fa-brands fa-spotify"></i></a>
+            <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" data-aos="fade-left">
+          <div id="form-success" class="form-success" style="display:none;">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Message sent! Evette will get back to you soon.</p>
+          </div>
+          <div id="form-error" class="form-error" style="display:none;">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <p>Something went wrong. Please try again.</p>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name *</label>
+              <input type="text" id="name" name="name" placeholder="e.g. Alex Petrov" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inquiry_type">Type of Inquiry *</label>
+            <select id="inquiry_type" name="inquiry_type" required>
+              <option value="" disabled selected>Select a topic...</option>
+              <option value="booking">Booking — Club / Festival</option>
+              <option value="livepa">Booking — Live PA</option>
+              <option value="collab">Collaboration / Co-production</option>
+              <option value="label">Label / A&R</option>
+              <option value="sync">Sync & Licensing</option>
+              <option value="press">Press / Media</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell Evette about your project, venue, or idea..." required></textarea>
+          </div>
+
+          <button type="submit" id="submitBtn">
+            <span id="btn-text">Send Message</span>
+            <span id="btn-loading" style="display:none;"><i class="fa-solid fa-spinner fa-spin"></i> Sending...</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo"><span>Evette</span></div>
+      <div class="footer-links">
+        <a href="#top">Home</a>
+        <a href="#about">About</a>
+        <a href="#releases">Releases</a>
+        <a href="#services">Bookings</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-text">
+        <span>© 2026 IvyEvette · All Rights Reserved</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top button -->
+  <div class="scroll-button">
+    <a href="#top" id="scrollBtn">↑</a>
+  </div>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true });
+  </script>
+  <script src="script.js"></script>
+
+  <!-- Typewriter-script
+  <script>
+    const words = [
+      "Live Performances",
+      "New Releases",
+      "Festival Sets",
+      "Artist Collaborations",
+      "Sound Design",
+      "Club Experiences",
+      "Remixes & Edits",
+      "Global Bookings"
+    ];
+    
+    const textElement = document.querySelector(".typewriter-text");
+    
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    
+    function typeEffect() {
+      const currentWord = words[wordIndex];
+    
+      if (!isDeleting) {
+        textElement.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+    
+        if (charIndex === currentWord.length) {
+          isDeleting = true;
+          setTimeout(typeEffect, 1800);
+          return;
+        }
+      } else {
+        textElement.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+    
+        if (charIndex === 0) {
+          isDeleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+        }
+      }
+    
+      const speed = isDeleting ? 50 : 100;
+      setTimeout(typeEffect, speed);
+    }
+    
+    document.addEventListener("DOMContentLoaded", () => {
+      typeEffect();
+    });
+    </script> -->
+
+    <!-- Contact With Me script -->
+    <script>
+      const form = document.getElementById("contactForm");
+
+      const successBox = document.getElementById("form-success");
+      const errorBox = document.getElementById("form-error");
+      const submitBtn = document.getElementById("submitBtn");
+      const btnText = document.getElementById("btn-text");
+      const btnLoading = document.getElementById("btn-loading");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        // reset messages
+        successBox.style.display = "none";
+        errorBox.style.display = "none";
+
+        // loading state
+        submitBtn.disabled = true;
+        btnText.style.display = "none";
+        btnLoading.style.display = "inline-flex";
+
+        const data = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          inquiry_type: document.getElementById("inquiry_type").value,
+          message: document.getElementById("message").value
+        };
+
+        try {
+          const res = await fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+          });
+
+          const result = await res.json();
+
+          if (result.success) {
+            successBox.style.display = "flex";
+            form.reset();
+          } else {
+            errorBox.style.display = "flex";
+          }
+
+        } catch (err) {
+          errorBox.style.display = "flex";
+        }
+
+        // reset button state
+        submitBtn.disabled = false;
+        btnText.style.display = "inline";
+        btnLoading.style.display = "none";
+      });
+    </script>
+    
+</body>
+</html>
