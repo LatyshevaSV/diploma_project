@@ -1,7 +1,7 @@
-/* ─── Google Fonts ─────────────────────────────────── */
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
 
-/* ─── Reset & Base ─────────────────────────────────── */
+/* Reset & Base */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -32,12 +32,12 @@ body {
 
 a { text-decoration: none; color: inherit; }
 
-/* ─── Scrollbar ─────────────────────────────────────── */
+/* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
 
-/* ─── Shared Button Styles ──────────────────────────── */
+/* Shared Button Styles */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -79,7 +79,7 @@ a { text-decoration: none; color: inherit; }
   color: var(--accent);
 }
 
-/* ─── NAV ────────────────────────────────────────────── */
+/* NAV */
 nav {
   position: fixed;
   top: 0; left: 0;
@@ -166,7 +166,7 @@ nav {
 }
 .dropdown .links a:hover { background: var(--surface); color: var(--accent); }
 
-/* ─── SECTION BASE ───────────────────────────────────── */
+/* SECTION BASE */
 section {
   width: 100%;
   padding-top: 100px;
@@ -179,7 +179,7 @@ section {
   margin: 0 auto;
 }
 
-/* ─── SECTION TITLE ─────────────────────────────────── */
+/* SECTION TITLE */
 .title {
   display: flex;
   justify-content: center;
@@ -213,7 +213,7 @@ section {
   margin-bottom: 50px;
 }
 
-/* ─── HERO ───────────────────────────────────────────── */
+/* HERO */
 .hero {
   min-height: 100vh;
   padding-top: 64px;
@@ -323,7 +323,7 @@ section {
 .typewriter label { color: var(--accent); animation: blink 1s step-end infinite; }
 @keyframes blink { 50% { opacity: 0; } } */ 
 
-/* I've changed this part w/ the GPT advice about the typewriter!!! */
+/* I've changed this part commit 2*/
 .typewriter {
     font-family: var(--font-mono);
     font-size: clamp(1rem, 2vw, 1.3rem);
@@ -395,7 +395,7 @@ section {
   50% { transform: translateY(4px); }
 }
 
-/* ─── ABOUT ──────────────────────────────────────────── */
+/* ABOUT */
 .about { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 
 .about-details {
@@ -463,7 +463,7 @@ section {
   border-radius: 2px;
 }
 
-/* ─── RELEASES ────────────────────────────────────────── */
+/* RELEASES */
 .releases { background: var(--bg); }
 
 .releases-grid {
@@ -515,7 +515,7 @@ section {
 
 .releases-cta { text-align: center; }
 
-/* ─── SERVICES (BOOKINGS) ────────────────────────────── */
+/* SERVICES (BOOKINGS) */
 .services { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 
 .services .boxes {
@@ -555,7 +555,7 @@ section {
 .services .box .topic { font-size: 1rem; font-weight: 600; margin-bottom: 10px; color: var(--text); }
 .services .box p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
 
-/* ─── CONTACT ────────────────────────────────────────── */
+/* CONTACT */
 .contact { background: var(--bg); }
 
 .contact-wrapper {
@@ -578,7 +578,7 @@ section {
 
 .contact-socials { margin-top: 32px; }
 
-/* ─── FORM ───────────────────────────────────────────── */
+/* FORM */
 .contact-form {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -658,7 +658,7 @@ section {
 .form-success { background: rgba(200,245,62,0.1); border: 1px solid rgba(200,245,62,0.3); color: var(--accent); }
 .form-error   { background: rgba(255,80,80,0.1);  border: 1px solid rgba(255,80,80,0.3);  color: #ff8080; }
 
-/* ─── FOOTER ─────────────────────────────────────────── */
+/* FOOTER */
 footer {
   background: var(--surface);
   border-top: 1px solid var(--border);
@@ -690,7 +690,7 @@ footer {
 .footer-links a:hover { color: var(--text); }
 .footer-text { font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); }
 
-/* ─── SCROLL BUTTON ─────────────────────────────────── */
+/* SCROLL BUTTON */
 .scroll-button a {
   position: fixed;
   bottom: 24px; right: 24px;
@@ -708,7 +708,7 @@ footer {
 }
 .scroll-button a:hover { transform: translateY(-3px); }
 
-/* ─── RESPONSIVE ─────────────────────────────────────── */
+/* RESPONSIVE */
 @media (max-width: 1100px) {
   .releases-grid { grid-template-columns: repeat(2, 1fr); }
   .services .boxes { grid-template-columns: repeat(2, 1fr); }

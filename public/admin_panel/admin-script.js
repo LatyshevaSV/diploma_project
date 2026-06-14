@@ -7,7 +7,7 @@ _______________________________________________________ */
 let allMessages = [];   // full list from server
 let currentId   = null; // id of the message open in modal
 
-/* -- Helpers ----------------------------------------- */
+/* Helpers */
 
 const LABELS = {
   booking: "Booking – Club",
@@ -28,7 +28,7 @@ function fmtDate(iso) {
   });
 }
 
-/* -- Load all messages from server --------------------- */
+/* Load all messages from server */
 async function load() {
   try {
     const res = await fetch("/api/messages");
@@ -40,19 +40,19 @@ async function load() {
   render();
 }
 
-/* -- Render list (filter + search applied) ------------- */
+/* Render list (filter + search applied) */
 function render() {
   const filterVal = document.getElementById("filter").value;
   const searchVal = document.getElementById("search").value.toLowerCase().trim();
 
   let list = [...allMessages];
 
-  // -- Filter by inquiry type
+  // Filter by inquiry type
   if (filterVal !== "all") {
     list = list.filter(m => m.inquiry_type === filterVal);
   }
 
-  // -- Search by name OR email (both fields)
+  // Search by name OR email (both fields)
   if (searchVal) {
     list = list.filter(m =>
       (m.name  || "").toLowerCase().includes(searchVal) ||
@@ -60,7 +60,7 @@ function render() {
     );
   }
 
-  // -- Build HTML rows - show only sender + type, NO message text
+  // Build HTML rows - show only sender + type, NO message text
   const container = document.getElementById("message-list");
 
   if (list.length === 0) {
@@ -87,7 +87,7 @@ function render() {
   updateStats();
 }
 
-/* -- Update stat counters ------------------------------ */
+/* Update stat counters */
 function updateStats() {
   document.getElementById("stat-total").textContent   = allMessages.length;
   document.getElementById("stat-unread").textContent  = allMessages.filter(m => m.is_read === 0).length;
@@ -95,7 +95,7 @@ function updateStats() {
   document.getElementById("stat-collab").textContent  = allMessages.filter(m => m.inquiry_type === "collab").length;
 }
 
-/* -- Open modal with full message text ----------------- */
+/* Open modal with full message text */
 function openModal(id) {
   currentId = id;
   const m = allMessages.find(msg => msg.id === id);
@@ -108,7 +108,7 @@ function openModal(id) {
   document.getElementById("modal-email").href          = `mailto:${m.email}`;
   document.getElementById("modal-message").textContent = m.message;
 
-  // -- Grey out "Mark as Read" if already read
+  // Grey out "Mark as Read" if already read
   const btnRead = document.getElementById("btn-read");
   btnRead.disabled = m.is_read === 1;
   btnRead.textContent = m.is_read === 1 ? "✔ Already Read" : "Mark as Read";
@@ -116,7 +116,7 @@ function openModal(id) {
   document.getElementById("modal").classList.remove("hidden");
 }
 
-/* -- Close modal by clicking the backdrop */
+/* Close modal by clicking the backdrop */
 function closeModalOnBg(e) {
   if (e.target === document.getElementById("modal")) closeModal();
 }
@@ -126,7 +126,7 @@ function closeModal() {
   currentId = null;
 }
 
-/* -- Mark as read --------------------------------------- */
+/* Mark as read */
 async function markRead() {
   if (currentId === null) return;
 
@@ -135,7 +135,7 @@ async function markRead() {
     const data = await res.json();
 
     if (data.success) {
-      // -- Update local state immediately - no need to re-fetch everything
+      // Update local state immediately - no need to re-fetch everything
       const msg = allMessages.find(m => m.id === currentId);
       if (msg) msg.is_read = 1;
 
@@ -147,7 +147,7 @@ async function markRead() {
   }
 }
 
-/* ── Delete message ──────────────────────────────────── */
+/* Delete message */
 async function deleteMsg() {
   if (currentId === null) return;
   if (!confirm("Delete this message? This cannot be undone.")) return;
@@ -168,7 +168,7 @@ async function deleteMsg() {
   }
 }
 
-/* ── Safety: escape HTML to prevent XSS ─────────────── */
+/* Safety: escape HTML to prevent XSS */
 function escHtml(str) {
   return String(str)
     .replace(/&/g, "&amp;")
@@ -177,5 +177,5 @@ function escHtml(str) {
     .replace(/"/g, "&quot;");
 }
 
-/* ── Boot ─────────────────────────────────────────────── */
+/* Boot */
 load();

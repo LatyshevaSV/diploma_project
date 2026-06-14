@@ -1,4 +1,4 @@
-/* ── Navbar hamburger ──────────────────────────────── */
+/* Navbar hamburger */
 function hamburg() {
   document.querySelector(".dropdown").style.transform = "translateY(0)";
 }
@@ -6,7 +6,7 @@ function cancel() {
   document.querySelector(".dropdown").style.transform = "translateY(-120%)";
 }
 
-/* ── Typewriter ────────────────────────────────────── */
+/* Typewriter */
 const words = ["Live Performances",
       "New Releases",
       "Festival Sets",
@@ -33,7 +33,7 @@ function typeWrite() {
 }
 typeWrite();
 
-/* ── Scroll-to-top button ──────────────────────────── */
+/* Scroll-to-top button */
 const scrollBtn = document.getElementById("scrollBtn");
 if (scrollBtn) {
   window.addEventListener("scroll", () => {
@@ -41,7 +41,7 @@ if (scrollBtn) {
   });
 }
 
-/* ── Contact form → POST /api/contact ─────────────── */
+/* Contact form - POST /api/contact */
 const form      = document.getElementById("contactForm");
 const successEl = document.getElementById("form-success");
 const errorEl   = document.getElementById("form-error");
