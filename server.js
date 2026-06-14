@@ -98,5 +98,5 @@ app.delete("/api/messages/:id", (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server running → http://localhost:${PORT}`);
-  console.log(`Admin panel  → http://localhost:${PORT}/admin.html`);
+  console.log(`Admin panel  → http://localhost:${PORT}/admin`);
 });
