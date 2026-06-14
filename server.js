@@ -5,7 +5,16 @@ const app = express();
 const PORT = 3000;
 
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static("public/main_page"));
+app.use("/admin", express.static("public/admin_panel"));
+app.use("/admin-panel", express.static("public/admin_panel"));
+
+app.get("/admin", (req, res) => {
+  res.sendFile(__dirname + "/public/admin_panel/admin.html");
+});
+app.get("/admin.html", (req, res) => {
+  res.sendFile(__dirname + "/public/admin_panel/admin.html");
+});
 
 const db = new sqlite3.Database("./evette.db");
 
